@@ -1,5 +1,5 @@
 const WEBAPP_URL =
-  "ใส่ URL Google Apps Script /exec ตรงนี้";
+  "https://script.google.com/macros/s/AKfycbxW3kv71tPX52YjTjeUOPUQKSCBUFs_nX2eOnuu4EFOm1RM6VAoYqWQpnftdgeTbSSG/exec";
 
 
 let scanner = null;
