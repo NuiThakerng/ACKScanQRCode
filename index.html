@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+
+<body>
+
+<h2>Basket QR Scanner</h2>
+
+<input id="user" placeholder="ชื่อผู้ใช้">
+<input id="location" placeholder="Location">
+
+<select id="status">
+<option value="OUT">OUT</option>
+<option value="IN">IN</option>
+</select>
+
+<button id="startBtn">เปิดกล้อง</button>
+
+<div id="reader"></div>
+<div id="result"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
