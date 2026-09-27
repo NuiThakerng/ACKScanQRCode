@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+<title>
+QR Code Generator
+</title>
+
+<link
+  rel="stylesheet"
+  href="style.css">
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+</script>
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+  <div class="brand">
+    SMART BASKET TRACKER
+  </div>
+
+  <div class="brand-sub">
+    By DIPROM
+  </div>
+
+</header>
+
+
+<nav class="nav">
+
+  <a href="index.html">
+    Scan
+  </a>
+
+  <a
+    href="qr-generator.html"
+    class="active">
+    QR Generator
+  </a>
+
+</nav>
+
+
+<main class="container">
+
+
+  <section class="hero">
+
+    <div class="hero-title">
+      QR Code Generator
+    </div>
+
+    <div class="hero-text">
+      Create & Print Basket QR Codes
+    </div>
+
+  </section>
+
+
+  <section class="card">
+
+
+    <label>
+      Basket ID
+      <span>*</span>
+    </label>
+
+
+    <input
+      id="basketId"
+      type="text"
+      inputmode="numeric"
+      maxlength="8"
+      placeholder="ตัวเลข 8 หลัก">
+
+
+    <div
+      id="idHint"
+      class="hint">
+
+      ต้องเป็นตัวเลข 8 หลักเท่านั้น
+
+    </div>
+
+
+    <label>
+      จำนวน QR Code
+      <span>*</span>
+    </label>
+
+
+    <input
+      id="quantity"
+      type="number"
+      min="1"
+      max="100"
+      value="1">
+
+
+    <button
+      id="generateBtn"
+      class="primary-btn">
+
+      สร้าง QR Code
+
+    </button>
+
+
+    <button
+      id="printBtn"
+      class="secondary-btn"
+      style="display:none">
+
+      🖨️ พิมพ์ QR Code
+
+    </button>
+
+
+    <div
+      id="generatorError"
+      class="error">
+    </div>
+
+
+  </section>
+
+
+  <section
+    id="printArea"
+    class="print-area">
+  </section>
+
+
+</main>
+
+
+<script
+  src="qr-generator.js">
+</script>
+
+
+</body>
+
+</html>
