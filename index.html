@@ -1,29 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+<title>Smart Basket QR Scanner</title>
+
 <link rel="stylesheet" href="style.css">
+
 <script src="https://unpkg.com/html5-qrcode"></script>
+
 </head>
 
 <body>
 
-<h2>Basket QR Scanner</h2>
+<header class="topbar">
 
-<input id="user" placeholder="ชื่อผู้ใช้">
-<input id="location" placeholder="Location">
+  <div>
+    <div class="brand">
+      SMART BASKET TRACKER
+    </div>
 
-<select id="status">
-<option value="OUT">OUT</option>
-<option value="IN">IN</option>
-</select>
+    <div class="subtitle">
+      By DIPROM
+    </div>
+  </div>
 
-<button id="startBtn">เปิดกล้อง</button>
+</header>
 
-<div id="reader"></div>
-<div id="result"></div>
+
+<main class="container">
+
+  <div class="page-title">
+    Smart Basket QR Scanner
+  </div>
+
+  <div class="card">
+
+    <label>
+      ผู้ใช้งาน <span>*</span>
+    </label>
+
+    <input
+      id="user"
+      type="text"
+      placeholder="กรุณาระบุชื่อผู้ใช้งาน"
+      autocomplete="name">
+
+
+    <label>
+      Location <span>*</span>
+    </label>
+
+    <input
+      id="location"
+      type="text"
+      placeholder="กรุณาระบุสถานที่">
+
+
+    <label>
+      Action <span>*</span>
+    </label>
+
+    <select id="action">
+
+      <option value="">
+        -- กรุณาเลือก --
+      </option>
+
+      <option value="IN">
+        IN - รับเข้า
+      </option>
+
+      <option value="OUT">
+        OUT - นำออก
+      </option>
+
+    </select>
+
+
+    <label>
+      น้ำหนัก (kg) <span>*</span>
+    </label>
+
+    <input
+      id="weight"
+      type="number"
+      step="0.01"
+      min="0"
+      placeholder="เช่น 12.50">
+
+
+    <button
+      id="startBtn"
+      class="primary-btn">
+
+      📷 เปิดกล้องเพื่อสแกน QR
+
+    </button>
+
+    <div
+      id="error"
+      class="error">
+    </div>
+
+  </div>
+
+
+  <div
+    id="scannerCard"
+    class="card scanner-card hidden">
+
+    <div id="reader"></div>
+
+  </div>
+
+
+  <div
+    id="result"
+    class="result hidden">
+  </div>
+
+</main>
+
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
