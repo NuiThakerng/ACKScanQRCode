@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="th">
 
 <head>
@@ -9,62 +10,102 @@
   name="viewport"
   content="width=device-width, initial-scale=1.0">
 
-<title>Smart Basket QR Scanner</title>
+<title>
+Smart Basket QR Scanner
+</title>
 
-<link rel="stylesheet" href="style.css">
+<link
+  rel="stylesheet"
+  href="style.css">
 
-<script src="https://unpkg.com/html5-qrcode"></script>
+<script
+  src="https://unpkg.com/html5-qrcode">
+</script>
 
 </head>
 
+
 <body>
+
 
 <header class="topbar">
 
-  <div>
-    <div class="brand">
-      SMART BASKET TRACKER
-    </div>
+  <div class="brand">
+    SMART BASKET TRACKER
+  </div>
 
-    <div class="subtitle">
-      By DIPROM
-    </div>
+  <div class="brand-sub">
+    By DIPROM
   </div>
 
 </header>
 
 
+<nav class="nav">
+
+  <a
+    href="index.html"
+    class="active">
+    Scan
+  </a>
+
+  <a
+    href="qr-generator.html">
+    QR Generator
+  </a>
+
+</nav>
+
+
 <main class="container">
 
-  <div class="page-title">
-    Smart Basket QR Scanner
-  </div>
 
-  <div class="card">
+  <section class="hero">
+
+    <div class="hero-title">
+      Smart Basket QR Scanner
+    </div>
+
+    <div class="hero-text">
+      Scan • Weigh • Track
+    </div>
+
+  </section>
+
+
+  <section class="card">
+
+
+    <div class="section-title">
+      Transaction Information
+    </div>
+
 
     <label>
-      ผู้ใช้งาน <span>*</span>
+      ผู้ใช้งาน
+      <span>*</span>
     </label>
 
     <input
       id="user"
       type="text"
-      placeholder="กรุณาระบุชื่อผู้ใช้งาน"
-      autocomplete="name">
+      placeholder="กรุณาระบุชื่อผู้ใช้งาน">
 
 
     <label>
-      Location <span>*</span>
+      Location
+      <span>*</span>
     </label>
 
     <input
       id="location"
       type="text"
-      placeholder="กรุณาระบุสถานที่">
+      placeholder="เช่น Warehouse">
 
 
     <label>
-      Action <span>*</span>
+      Action
+      <span>*</span>
     </label>
 
     <select id="action">
@@ -74,25 +115,27 @@
       </option>
 
       <option value="IN">
-        IN - รับเข้า
+        IN — รับเข้า
       </option>
 
       <option value="OUT">
-        OUT - นำออก
+        OUT — นำออก
       </option>
 
     </select>
 
 
     <label>
-      น้ำหนัก (kg) <span>*</span>
+      น้ำหนัก (kg)
+      <span>*</span>
     </label>
 
     <input
       id="weight"
       type="number"
-      step="0.01"
+      inputmode="decimal"
       min="0"
+      step="0.01"
       placeholder="เช่น 12.50">
 
 
@@ -100,36 +143,54 @@
       id="startBtn"
       class="primary-btn">
 
-      📷 เปิดกล้องเพื่อสแกน QR
+      📷 เปิดกล้องและสแกน QR
 
     </button>
+
 
     <div
       id="error"
       class="error">
     </div>
 
-  </div>
+
+  </section>
 
 
-  <div
+  <section
     id="scannerCard"
-    class="card scanner-card hidden">
+    class="card hidden">
+
+    <div class="scanner-title">
+      Scan Basket QR Code
+    </div>
 
     <div id="reader"></div>
 
-  </div>
+  </section>
 
 
-  <div
+  <section
     id="result"
     class="result hidden">
-  </div>
+  </section>
+
 
 </main>
 
 
-<script src="script.js"></script>
+<footer>
+
+  SMART BASKET TRACKER
+  By DIPROM
+
+</footer>
+
+
+<script
+  src="script.js">
+</script>
+
 
 </body>
 
