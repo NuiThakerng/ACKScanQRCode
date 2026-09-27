@@ -1,4 +1,4 @@
-const WEBAPP_URL="YOUR_WEBAPP_URL";
+const WEBAPP_URL="https://script.google.com/macros/s/AKfycbzta5Hdr4bSfOvS4EZrLkyduRKPfOakAxsxwm5oNJVl-Ju3ywJCr_BM03074cxRVDXD/exec";
 
 document.getElementById("startBtn").addEventListener("click",startScanner);
 
